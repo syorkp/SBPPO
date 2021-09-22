@@ -15,7 +15,7 @@ from environment import CustomEnv
 env = CustomEnv(rendering_frequency=100)
 # check_env(env)
 
-model = PPO2(CustomPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=1)#, tensorboard_log='./ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
+model = PPO2(CustomPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=1, tensorboard_log='./ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 # model = PPO2.load("ppo2_cartpole", env=env)
 
 model.learn(total_timesteps=2500000)#, callback=TensorboardCallback())
