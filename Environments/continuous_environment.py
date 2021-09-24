@@ -10,7 +10,7 @@ class ContinuousEnv(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
-    def __init__(self, rendering_frequency):
+    def __init__(self, rendering_frequency, trial_name):
         super(ContinuousEnv, self).__init__()
         # Define action and observation space
         # They must be gym.spaces objects
@@ -33,6 +33,8 @@ class ContinuousEnv(gym.Env):
 
         self.save_frames = False
         self.frame_buffer = []
+
+        self.trial_name = trial_name
 
     def load_configuration_files(self):
         # with open(f"{self.current_configuration_location}_learning.json", 'r') as f:
@@ -61,7 +63,7 @@ class ContinuousEnv(gym.Env):
     def reset(self):
         if self.save_frames:
             # Create the GIF
-            make_gif(self.frame_buffer, f"./episodes/episode-{str(self.episode_number)}.gif",
+            make_gif(self.frame_buffer, f"./Output/{self.trial_name}/episode-{str(self.episode_number)}.gif",
                      duration=len(self.frame_buffer) * 0.03, true_image=True)
             self.frame_buffer = []
             self.save_frames = False
