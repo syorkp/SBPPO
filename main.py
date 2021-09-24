@@ -1,24 +1,24 @@
-# import gym
-
-from stable_baselines.common.policies import MlpLstmPolicy
 from stable_baselines.common import make_vec_env
 from stable_baselines import PPO2
-#from stable_baselines.common.env_checker import check_env
-from policy import CustomPolicy
+from stable_baselines.common.callbacks import CheckpointCallback
 
-#from additional_logging import TensorboardCallback
+from additional_logging import TensorboardCallback
 
-from environment import CustomEnv
+from Networks.continuous_policy import CustomPolicy
+from Networks.reflected_policy import ReflectedPolicy
 
-# multiprocess environment
-env = make_vec_env(CustomEnv, n_envs=8, env_kwargs={"rendering_frequency": 200})
-# env = CustomEnv(rendering_frequency=100)
-# check_env(env)
+from Environments.continuous_environment import ContinuousEnv
+from Environments.discrete_environment import DiscreteEnv
 
-model = PPO2(CustomPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=4, tensorboard_log='./ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
-# model = PPO2.load("ppo2_cartpole", env=env)
+# Callbacks for saving
+checkpoint_callback = CheckpointCallback(save_freq=1000, save_path='./model_checkpoints/')
+env_log_callback = TensorboardCallback()
 
-model.learn(total_timesteps=2500000)#, callback=TensorboardCallback())
+env = make_vec_env(ContinuousEnv, n_envs=8, env_kwargs={"rendering_frequency": 200})
+
+model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=4, tensorboard_log='./ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
+
+model.learn(total_timesteps=2500000)#, callback=[env_log_callback, checkpoint_callback])
 model.save("ppo_simfish")
 
 del model # remove to demonstrate saving and loading

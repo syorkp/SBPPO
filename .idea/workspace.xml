@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Environments/Action_Space/bout_distributions.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environments/Action_Space/draw_angle_dist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environments/continuous_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Networks/reflected_policy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/additional_logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/additional_logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/discrete_environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/fish_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/continuous_policy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +39,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Environments" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Environments" />
+      <recent name="$PROJECT_DIR$/Networks" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Tools" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Environments" />
+      <recent name="$PROJECT_DIR$/Networks" />
       <recent name="$PROJECT_DIR$/old_episodes" />
     </key>
   </component>
@@ -46,9 +59,6 @@
       <module name="SBPPO" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -92,6 +102,8 @@
       <workItem from="1632299135173" duration="12888000" />
       <workItem from="1632385154669" duration="11568000" />
       <workItem from="1632469196590" duration="740000" />
+      <workItem from="1632488073135" duration="6670000" />
+      <workItem from="1632496767818" duration="134000" />
     </task>
     <servers />
   </component>
@@ -114,24 +126,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/additional_logging.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/policy.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/common/policies.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/Environments/fish_env.py</url>
+          <line>836</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1632315495510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1632494316243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
