@@ -1,2 +1,6 @@
 
 Output
+/Tools/__pycache__/
+/Environments/__pycache__/
+/Networks/__pycache__/
+/__pycache__/

@@ -1,5 +1,6 @@
 import numpy as np
 from abc import ABC, abstractmethod
+from gym.spaces import Discrete
 
 import gym
 import tensorflow.compat.v1 as tf
@@ -84,7 +85,8 @@ class ReflectedPolicy(RecurrentActorCriticPolicy):
     def __init__(self, sess, ob_space, ac_space, n_env, n_steps, n_batch, reuse=False, **kwargs):
         super(ReflectedPolicy, self).__init__(sess, ob_space, ac_space, n_env, n_steps, n_batch, state_shape=(2 * 512, ), reuse=reuse, scale=True)
 
-        self._pdtype = ReflectedProbabilityDist(ac_space.shape[0])
+        if type(ac_space) is not Discrete:
+            self._pdtype = ReflectedProbabilityDist(ac_space.shape[0])
 
         with tf.variable_scope("model", reuse=reuse):
             pi_latent, pi_latent_ref, vf_latent, vf_latent_ref = self.create_network("model", ob_space)
