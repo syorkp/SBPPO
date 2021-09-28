@@ -4,13 +4,14 @@ from stable_baselines.common import make_vec_env
 from stable_baselines import PPO2
 from stable_baselines.common.callbacks import CheckpointCallback
 
-from additional_logging import TensorboardCallback
+from additional_logging import LoggingCallback, SavingCallback
 
 from Networks.reflected_policy import ReflectedPolicy
 
 from Environments.continuous_environment import ContinuousEnv
 from Environments.discrete_environment import DiscreteEnv
 
+import tensorflow as tf
 
 trial_name = "DiscreteReflected2"
 
@@ -29,9 +30,9 @@ env = make_vec_env(DiscreteEnv, n_envs=8, env_kwargs={"rendering_frequency": 200
 
 model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=4, tensorboard_log=f'./Output/{trial_name}/ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 
-model.learn(total_timesteps=2500000)#, callback=checkpoint_callback)#, callback=[env_log_callback, checkpoint_callback])
-
-
+model.learn(total_timesteps=2500000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
+saver = tf.train.Saver(max_to_keep=5)
+saver.save(model.sess, f"model-{trial_name}.cptk")
 # model = PPO2.load("ppo_simfish")
 
 # obs = env.reset()

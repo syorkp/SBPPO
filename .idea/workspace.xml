@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environments/continuous_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/continuous_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environments/discrete_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/discrete_environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/additional_logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/additional_logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +52,6 @@
       <module name="SBPPO" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -106,6 +103,8 @@
       <workItem from="1632733806458" duration="61000" />
       <workItem from="1632817820557" duration="1169000" />
       <workItem from="1632834500149" duration="802000" />
+      <workItem from="1632839697715" duration="1208000" />
+      <workItem from="1632841598584" duration="303000" />
     </task>
     <servers />
   </component>
@@ -131,6 +130,11 @@
           <url>file://$PROJECT_DIR$/Environments/fish_env.py</url>
           <line>836</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/additional_logging.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
