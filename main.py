@@ -30,7 +30,7 @@ env = make_vec_env(DiscreteEnv, n_envs=8, env_kwargs={"rendering_frequency": 200
 
 model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=4, tensorboard_log=f'./Output/{trial_name}/ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 
-model.learn(total_timesteps=2500000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
+model.learn(total_timesteps=1000000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
 saver = tf.train.Saver(max_to_keep=5)
 saver.save(model.sess, f"model-{trial_name}.cptk")
 # model = PPO2.load("ppo_simfish")
