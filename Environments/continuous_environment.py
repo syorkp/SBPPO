@@ -63,7 +63,7 @@ class ContinuousEnv(gym.Env):
     def reset(self):
         if self.save_frames:
             # Create the GIF
-            make_gif(self.frame_buffer, f"./Output/{self.trial_name}/episode-{str(self.episode_number)}.gif",
+            make_gif(self.frame_buffer, f"./Output/{self.trial_name}/episodes/episode-{str(self.episode_number)}.gif",
                      duration=len(self.frame_buffer) * 0.03, true_image=True)
             self.frame_buffer = []
             self.save_frames = False
