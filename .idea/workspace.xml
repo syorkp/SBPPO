@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additional_logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/additional_logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Networks/reflected_policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/reflected_policy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +105,9 @@
       <workItem from="1632834500149" duration="802000" />
       <workItem from="1632839697715" duration="1208000" />
       <workItem from="1632841598584" duration="303000" />
+      <workItem from="1632842745671" duration="219000" />
+      <workItem from="1632916076722" duration="2588000" />
+      <workItem from="1632951172475" duration="559000" />
     </task>
     <servers />
   </component>
@@ -136,10 +139,20 @@
           <line>15</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/common/distributions.py</url>
+          <line>239</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Networks/reflected_policy.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1632494316243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1632951049503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
