@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Networks/reflected_policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/reflected_policy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +51,9 @@
       <module name="SBPPO" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -108,6 +110,11 @@
       <workItem from="1632842745671" duration="219000" />
       <workItem from="1632916076722" duration="2588000" />
       <workItem from="1632951172475" duration="559000" />
+      <workItem from="1632989270621" duration="418000" />
+      <workItem from="1633009498419" duration="898000" />
+      <workItem from="1633036482998" duration="1705000" />
+      <workItem from="1633087966760" duration="156000" />
+      <workItem from="1633334248207" duration="1314000" />
     </task>
     <servers />
   </component>
@@ -143,11 +150,6 @@
           <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/common/distributions.py</url>
           <line>239</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Networks/reflected_policy.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
