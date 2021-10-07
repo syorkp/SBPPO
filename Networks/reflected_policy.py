@@ -13,6 +13,7 @@ from stable_baselines.common.tf_layers import lstm, linear
 # Problems: Passing in correct obs, reflected architecture - would need to modify the distribution or create custom
 from stable_baselines.common.distributions import DiagGaussianProbabilityDistributionType, CategoricalProbabilityDistributionType
 
+
 def batch_to_seq(tensor_batch, n_batch, n_steps, flat=False):
     """
     Transform a batch of Tensors, into a sequence of Tensors for recurrent policies
@@ -107,7 +108,6 @@ class ReflectedPolicy(RecurrentActorCriticPolicy):
         else:
             self._pdtype = ReflectedProbabilityDistDiscrete(ac_space.n)
 
-
         with tf.variable_scope("model", reuse=reuse):
             pi_latent, pi_latent_ref, vf_latent, vf_latent_ref = self.create_network("model", ob_space)
             # TODO: pass in internal state and prev action
@@ -115,7 +115,7 @@ class ReflectedPolicy(RecurrentActorCriticPolicy):
             value_fn_1 = tf.layers.dense(vf_latent, 1, name='vf')
             value_fn_2 = tf.layers.dense(vf_latent_ref, 1, name='vf', reuse=True)
 
-            value_fn = value_fn_1 - value_fn_2
+            value_fn = tf.divide(tf.add(value_fn_1, value_fn_2), 2)
 
             self._proba_distribution, self._policy, self.q_value = \
                 self.pdtype.proba_distribution_from_latent(pi_latent, pi_latent_ref, vf_latent, vf_latent_ref, init_scale=0.01)

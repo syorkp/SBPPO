@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/SBPPO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SBPPO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Environments/fish_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/fish_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Networks/reflected_policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/reflected_policy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +117,10 @@
       <workItem from="1633036482998" duration="1705000" />
       <workItem from="1633087966760" duration="156000" />
       <workItem from="1633334248207" duration="1314000" />
+      <workItem from="1633429511446" duration="1610000" />
+      <workItem from="1633440439792" duration="8636000" />
+      <workItem from="1633510556979" duration="5704000" />
+      <workItem from="1633596207047" duration="4922000" />
     </task>
     <servers />
   </component>
@@ -138,7 +144,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Environments/fish_env.py</url>
-          <line>836</line>
+          <line>835</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -147,14 +153,19 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/common/distributions.py</url>
-          <line>239</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/Networks/continuous_policy.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1632951049503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1633528526244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

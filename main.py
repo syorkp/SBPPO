@@ -14,7 +14,7 @@ from Environments.discrete_environment import DiscreteEnv
 
 import tensorflow as tf
 
-trial_name = "ContinuousReflectedSaving"
+trial_name = "DiscreteReflected3"
 
 if not os.path.exists(f"Training-Output/{trial_name}/"):
     os.makedirs(f"Training-Output/{trial_name}/")
@@ -27,31 +27,31 @@ if not os.path.exists(f"Training-Output/{trial_name}/"):
 # checkpoint_callback = CheckpointCallback(save_freq=100000, save_path=f'./Training-Output/{trial_name}/model_checkpoints/')
 # env_log_callback = TensorboardCallback()
 
-env = make_vec_env(ContinuousEnv, n_envs=8, env_kwargs={"rendering_frequency": 100, "trial_name": trial_name})
+env = make_vec_env(DiscreteEnv, n_envs=8, env_kwargs={"rendering_frequency": 100, "trial_name": trial_name})
 model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=4,
              tensorboard_log=f'./Training-Output/{trial_name}/ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 
-model.learn(total_timesteps=100000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
-saver = tf.train.Saver(max_to_keep=10)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-100000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-200000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-300000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-400000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-500000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-600000.cptk")
-
-model.learn(total_timesteps=100000)
-saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-700000.cptk")
+model.learn(total_timesteps=2000000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
+# saver = tf.train.Saver(max_to_keep=10)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-100000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-200000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-300000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-400000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-500000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-600000.cptk")
+#
+# model.learn(total_timesteps=100000)
+# saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-700000.cptk")
 
 # model = PPO2.load("ppo_simfish")
 
