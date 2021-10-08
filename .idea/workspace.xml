@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SBPPO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SBPPO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environments/fish_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/fish_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Networks/reflected_policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/reflected_policy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +119,8 @@
       <workItem from="1633440439792" duration="8636000" />
       <workItem from="1633510556979" duration="5704000" />
       <workItem from="1633596207047" duration="4922000" />
+      <workItem from="1633614085991" duration="7415000" />
+      <workItem from="1633621641450" duration="852000" />
     </task>
     <servers />
   </component>
@@ -157,15 +157,10 @@
           <line>46</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1633528526244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SBPPO$main.coverage" NAME="main Coverage Results" MODIFIED="1633620336504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
