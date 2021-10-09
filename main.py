@@ -2,17 +2,15 @@ import os
 
 from stable_baselines.common import make_vec_env
 from stable_baselines import PPO2
-from stable_baselines.common.policies import LstmPolicy
-from stable_baselines.common.callbacks import CheckpointCallback
+#from stable_baselines.common.policies import LstmPolicy
 
-from additional_logging import LoggingCallback, SavingCallback
+# from stable_baselines.common.callbacks import CheckpointCallback
+# from additional_logging import LoggingCallback, SavingCallback
 
 from Networks.reflected_policy import ReflectedPolicy
 
 from Environments.continuous_environment import ContinuousEnv
 from Environments.discrete_environment import DiscreteEnv
-
-import tensorflow as tf
 
 trial_name = "DiscreteReflected3"
 
