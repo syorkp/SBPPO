@@ -125,6 +125,9 @@
       <workItem from="1633774565724" duration="2227000" />
       <workItem from="1633782934369" duration="1121000" />
       <workItem from="1633865409707" duration="389000" />
+      <workItem from="1633939802636" duration="3004000" />
+      <workItem from="1633944613300" duration="1442000" />
+      <workItem from="1633954827739" duration="3919000" />
     </task>
     <servers />
   </component>
@@ -147,11 +150,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Environments/fish_env.py</url>
-          <line>835</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/additional_logging.py</url>
           <line>15</line>
           <option name="timeStamp" value="20" />
@@ -160,11 +158,6 @@
           <url>file://$PROJECT_DIR$/Networks/continuous_policy.py</url>
           <line>46</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
-          <line>358</line>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
