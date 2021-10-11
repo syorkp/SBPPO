@@ -636,6 +636,7 @@ class ContinuousNaturalisticEnvironment(BaseEnvironment):
         self.pred_prey_wall2 = self.space.add_collision_handler(5, 7)
         self.pred_prey_wall2.begin = self.no_collision
 
+
     def reset(self):
         super().reset()
         self.fish.body.position = (np.random.randint(self.env_variables['fish_mouth_size'],
@@ -674,6 +675,7 @@ class ContinuousNaturalisticEnvironment(BaseEnvironment):
         self.last_action = action
         if frame_buffer is None:
             frame_buffer = []
+
         self.fish.making_capture = True  # TODO: Capture change is here.
 
         if impulse is not None:
@@ -905,7 +907,6 @@ class Fish:
         """
         return abs(angle) * self.env_variables['angle_penalty_scaling_factor'] + (distance**2) * self.env_variables['distance_penalty_scaling_factor']
 
-
     def take_realistic_action(self, action):
         if action == 0:  # Slow2
             angle_change, distance = draw_angle_dist(8)
@@ -1130,7 +1131,6 @@ class NaturalisticEnvironment(BaseEnvironment):
             self.create_vegetation()
 
     def simulation_step(self, action, save_frames, frame_buffer, activations, impulse):
-
         self.prey_consumed_this_step = False
         self.last_action = action
         if frame_buffer is None:
@@ -1226,6 +1226,8 @@ class NaturalisticEnvironment(BaseEnvironment):
         observation = np.dstack((self.fish.readings_to_photons(self.fish.left_eye.readings),
                                  self.fish.readings_to_photons(self.fish.right_eye.readings)))
 
+        self.making_capture = False
+
         return observation, reward, internal_state, done, frame_buffer
 
 
@@ -1278,10 +1280,13 @@ class DiscreteNaturalisticEnvironment(NaturalisticEnvironment):
         self.pred_prey_wall2 = self.space.add_collision_handler(5, 7)
         self.pred_prey_wall2.begin = self.no_collision
 
+        self.cs_required = False
+
     def reset(self):
         super().reset()
 
     def simulation_step(self, action, save_frames=False, frame_buffer=None, activations=None, impulse=None):
-        self.fish.making_capture = True  # TODO: Change back
+        if not self.cs_required:
+            self.fish.making_capture = True
         return super().simulation_step(action, save_frames, frame_buffer, activations, impulse)
 
