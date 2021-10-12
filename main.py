@@ -12,7 +12,7 @@ from Environments.continuous_environment import ContinuousEnv
 from Environments.discrete_environment import DiscreteEnv
 # from additional_logging import LoggingCallback, SavingCallback
 
-trial_name = "Continuous_Sigma_Tracking"
+trial_name = "ContinuousSigmaSaving"
 
 if not os.path.exists(f"Training-Output/{trial_name}/"):
     os.makedirs(f"Training-Output/{trial_name}/")
@@ -29,7 +29,7 @@ env = make_vec_env(ContinuousEnv, n_envs=1, env_kwargs={"rendering_frequency": 1
 model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=1,
              tensorboard_log=f'./Training-Output/{trial_name}/ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 
-model.learn(total_timesteps=10000000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
+model.learn(total_timesteps=10000)#, callback=saving_callback)#, callback=[env_log_callback, checkpoint_callback])
 saver = tf.train.Saver(max_to_keep=10)
 saver.save(model.sess, f"./Training-Output/{trial_name}/model_checkpoints/model-100000.cptk")
 

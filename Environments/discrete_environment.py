@@ -82,7 +82,8 @@ class DiscreteEnv(gym.Env):
         self.episode_number += 1
         if self.episode_number % self.rendering_frequency == 0 and self.episode_number != 0:
             self.save_frames = True
-        if self.episode_number == 500:
+        if self.episode_number == 5:
+            print("Requirement added")
             self.environment.cs_required = True
         return o1
 

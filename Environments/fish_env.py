@@ -356,6 +356,7 @@ class BaseEnvironment:
 
             return False
         else:
+            print("Tocuhed but no capture swim")
             return True
 
     def create_predator(self):
@@ -1289,4 +1290,5 @@ class DiscreteNaturalisticEnvironment(NaturalisticEnvironment):
         if not self.cs_required:
             self.fish.making_capture = True
         return super().simulation_step(action, save_frames, frame_buffer, activations, impulse)
+
 
