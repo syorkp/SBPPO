@@ -19,7 +19,7 @@ class ContinuousEnv(gym.Env):
         # Example for using image as input:
         self.observation_space = spaces.Box(low=0, high=255, shape=(120, 3, 2), dtype=np.int)
         # self.observation_space = spaces.Box(low=0, high=255, shape=(4, 60, 3), dtype=np.int)
-        self.current_configuration_location = "continuous_env"
+        self.current_configuration_location = "continuous"
         self.environment_params = self.load_configuration_files()
         self.environment = ContinuousNaturalisticEnvironment(self.environment_params, True)
 
