@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environments/discrete_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/discrete_environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environments/fish_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Environments/fish_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,7 @@
       <workItem from="1633964148652" duration="4064000" />
       <workItem from="1633989142517" duration="31000" />
       <workItem from="1633990599917" duration="587000" />
-      <workItem from="1634027341279" duration="1863000" />
+      <workItem from="1634027341279" duration="2751000" />
     </task>
     <servers />
   </component>
@@ -168,13 +165,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
-          <line>378</line>
+          <line>379</line>
           <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
-          <line>195</line>
-          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
