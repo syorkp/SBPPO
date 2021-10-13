@@ -1227,8 +1227,6 @@ class NaturalisticEnvironment(BaseEnvironment):
         observation = np.dstack((self.fish.readings_to_photons(self.fish.left_eye.readings),
                                  self.fish.readings_to_photons(self.fish.right_eye.readings)))
 
-        self.making_capture = False
-
         return observation, reward, internal_state, done, frame_buffer
 
 
@@ -1287,7 +1285,9 @@ class DiscreteNaturalisticEnvironment(NaturalisticEnvironment):
         super().reset()
 
     def simulation_step(self, action, save_frames=False, frame_buffer=None, activations=None, impulse=None):
-        if not self.cs_required:
+        if self.cs_required:
+            self.fish.making_capture = False
+        else:
             self.fish.making_capture = True
         return super().simulation_step(action, save_frames, frame_buffer, activations, impulse)
 
