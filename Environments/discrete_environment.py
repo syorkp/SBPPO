@@ -11,7 +11,7 @@ class DiscreteEnv(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
-    def __init__(self, rendering_frequency, trial_name):
+    def __init__(self, rendering_frequency, trial_name, scaffold_steps):
         super(DiscreteEnv, self).__init__()
         # Define action and observation space
         # They must be gym.spaces objects
@@ -35,6 +35,7 @@ class DiscreteEnv(gym.Env):
         self.frame_buffer = []
 
         self.trial_name = trial_name
+        self.scaffold_steps = scaffold_steps
 
     def load_configuration_files(self):
         # with open(f"{self.current_configuration_location}_learning.json", 'r') as f:
@@ -82,7 +83,7 @@ class DiscreteEnv(gym.Env):
         self.episode_number += 1
         if self.episode_number % self.rendering_frequency == 0 and self.episode_number != 0:
             self.save_frames = True
-        if self.episode_number == 5:
+        if self.episode_number == self.scaffold_steps:
             print("Requirement added")
             self.environment.cs_required = True
         return o1
