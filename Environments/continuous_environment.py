@@ -6,6 +6,7 @@ import copy
 from Tools.make_gif import make_gif
 from Environments.fish_env import ContinuousNaturalisticEnvironment
 
+
 class ContinuousEnv(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
