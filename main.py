@@ -12,7 +12,7 @@ from Environments.continuous_environment import ContinuousEnv
 from Environments.discrete_environment import DiscreteEnv
 # from additional_logging import LoggingCallback, SavingCallback
 
-trial_name = "DiscreteCSRequired"
+trial_name = "DiscreteCSRequiredInitially"
 
 if not os.path.exists(f"Training-Output/{trial_name}/"):
     os.makedirs(f"Training-Output/{trial_name}/")
@@ -25,7 +25,7 @@ if not os.path.exists(f"Training-Output/{trial_name}/"):
 # checkpoint_callback = CheckpointCallback(save_freq=100000, save_path=f'./Training-Output/{trial_name}/model_checkpoints/')
 # env_log_callback = TensorboardCallback()
 
-env = make_vec_env(DiscreteEnv, n_envs=1, env_kwargs={"rendering_frequency": 100, "trial_name": trial_name, "scaffold_steps": 100})  # TODO: Try without vectorised environment. Try without all other imports
+env = make_vec_env(DiscreteEnv, n_envs=1, env_kwargs={"rendering_frequency": 100, "trial_name": trial_name, "scaffold_steps": 0})  # TODO: Try without vectorised environment. Try without all other imports
 model = PPO2(ReflectedPolicy, env, n_steps=1000, full_tensorboard_log=False, nminibatches=1,
              tensorboard_log=f'./Training-Output/{trial_name}/ppo_tensorboard/')#, policy_kwargs={"data_format":"NCHW"})
 

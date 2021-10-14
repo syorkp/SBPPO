@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="33ca57f6-0d50-479d-99bf-776bb4ad43a0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,6 +130,7 @@
       <workItem from="1633989142517" duration="31000" />
       <workItem from="1633990599917" duration="587000" />
       <workItem from="1634027341279" duration="2751000" />
+      <workItem from="1634117954845" duration="8502000" />
     </task>
     <servers />
   </component>
@@ -162,11 +161,6 @@
           <url>file://$PROJECT_DIR$/Networks/continuous_policy.py</url>
           <line>46</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/stable_baselines/ppo2/ppo2.py</url>
-          <line>379</line>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
