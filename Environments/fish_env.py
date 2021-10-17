@@ -1279,7 +1279,7 @@ class DiscreteNaturalisticEnvironment(NaturalisticEnvironment):
         self.pred_prey_wall2 = self.space.add_collision_handler(5, 7)
         self.pred_prey_wall2.begin = self.no_collision
 
-        self.cs_required = False
+        self.cs_required = True
 
     def reset(self):
         super().reset()

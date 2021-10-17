@@ -12,7 +12,7 @@ from Environments.continuous_environment import ContinuousEnv
 from Environments.discrete_environment import DiscreteEnv
 # from additional_logging import LoggingCallback, SavingCallback
 
-trial_name = "DiscreteCSRequiredInitially"
+trial_name = "DiscreteCSAlwaysRequired"
 
 if not os.path.exists(f"Training-Output/{trial_name}/"):
     os.makedirs(f"Training-Output/{trial_name}/")
